@@ -10,11 +10,9 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -32,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/mallory-cvlh/02_NFTPreviewCardComponent)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Live Site URL: [Live](https://mallory-cvlh.github.io/02_NFTPreviewCardComponent/)
 
 ## My process
 
