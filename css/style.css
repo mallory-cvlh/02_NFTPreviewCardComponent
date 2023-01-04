@@ -56,7 +56,7 @@ body {
     background: var(--BG-PAGE);
     display: grid;
     min-height: 100vh;
-    place-items: center;
+    place-content: center;
 }
 
 .container {
@@ -118,10 +118,10 @@ p {
 
 /* || FOOTER */
 .footer {
-    bottom: 16rem;
     color: var(--WHITE);
     font-size: 1.25rem;
-    position: absolute;
+    margin-top: 2rem;
+    text-align: center;
 }
 
 .footer a{
