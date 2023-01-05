@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![image](https://user-images.githubusercontent.com/77162992/210400825-2b13ffe8-c27e-47b7-af1d-02a274594be7.png)
+![image](https://github.com/mallory-cvlh/02_NFTPreviewCardComponent/blob/main/img/screenshot.png)
 
 ### Links
 
@@ -38,12 +38,14 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- CSS Grid (a little bit)
+- CSS Grid 
+- CSS Flexbox
 
 ### Continued development
 
-- CSS box-shadow
 - CSS Grid
+- CSS Flexbox
+- Hover effect
 
 ## Author
 
