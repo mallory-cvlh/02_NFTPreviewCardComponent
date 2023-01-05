@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+/* || RESET */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+/* || VARIABLES */
+:root {
+    /* FONT */
+    --FF: 'Outfit', sans-serif;
+
+    /* COLORS */
+    --SOFT-BLUE:hsl(215, 51%, 70%);
+    --CYAN:hsl(178, 100%, 50%);
+    --BG-PAGE:hsl(217, 54%, 11%); 
+    --BG-CARD:hsl(216, 50%, 16%);
+    --LINE:hsl(215, 32%, 27%);
+    --WHITE:hsl(0, 0%, 100%);
+}
+
+/* || UTILITY CLASSES */
+.sr-only {
+    left: -10000px;
+    position: absolute;
+}
+
+.soft-blue{
+    color: var(--SOFT-BLUE);
+}
+
+.white {
+    color: var(--WHITE);
+}
+
+.cyan {
+    color: var(--CYAN);
+}
+
+/* || GENERAL STYLES */
+html{
+    font-family: var(--FF);
+}
+
+body {
+    background: var(--BG-PAGE);
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+}
+
+.container {
+    background: var(--BG-CARD);
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 0px var(--BG-CARD);
+    max-width: 350px;
+    padding: 1.5em;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* || HERO */
+.hero img{
+    border-radius: 10px;
+}
+
+.hero figcaption {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1em 0 0.5em;
+}
+
+/* || INLINE */
+.inline{
+    border-bottom: 1px solid var(--LINE);
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.inline figure {
+    display: flex;
+}
+
+.inline img {
+    margin-right: 0.5em;
+}
+
+/* || AUTHOR */
+.author {
+    align-items: center;
+    display: flex;
+    padding: 1em 0 0;
+}
+
+.author img {
+    border: 1px solid var(--WHITE);
+    border-radius: 50%;
+    height: auto;
+    width: 35px;
+}
+
+.author figcaption {
+    margin-left: 1em;
+}
+
+/* || FOOTER */
+.footer {
+    color: var(--WHITE);
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer a{
+    color: var(--WHITE);
+}

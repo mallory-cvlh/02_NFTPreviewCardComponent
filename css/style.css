@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-
 /* || RESET */
 *,
 *::after,
@@ -17,16 +15,19 @@ img {
 
 /* || VARIABLES */
 :root {
-    /* FONT */
+    /* FONTS */
     --FF: 'Outfit', sans-serif;
+    --FW-LIGHT: 300;
+    --FW-REGULAR: 400;
+    --FW-BOLD: 600;
 
     /* COLORS */
-    --SOFT-BLUE:hsl(215, 51%, 70%);
-    --CYAN:hsl(178, 100%, 50%);
-    --BG-PAGE:hsl(217, 54%, 11%); 
-    --BG-CARD:hsl(216, 50%, 16%);
-    --LINE:hsl(215, 32%, 27%);
-    --WHITE:hsl(0, 0%, 100%);
+    --SOFT-BLUE: hsl(215, 51%, 70%);
+    --CYAN: hsl(178, 100%, 50%);
+    --BODY-BG: hsl(217, 54%, 11%);
+    --CARD-BG: hsl(216, 50%, 16%);
+    --LINE-COLOR: hsl(215, 32%, 27%);
+    --WHITE: hsl(0, 0%, 100%);
 }
 
 /* || UTILITY CLASSES */
@@ -35,95 +36,133 @@ img {
     position: absolute;
 }
 
-.soft-blue{
-    color: var(--SOFT-BLUE);
-}
-
-.white {
-    color: var(--WHITE);
-}
-
-.cyan {
-    color: var(--CYAN);
-}
-
 /* || GENERAL STYLES */
-html{
-    font-family: var(--FF);
-}
-
 body {
-    background: var(--BG-PAGE);
+    background: var(--BODY-BG);
+    color: var(--SOFT-BLUE);
     display: grid;
+    font-family: var(--FF);
+    font-size: 1.125rem;
+    font-weight: var(--FW-REGULAR);
+    margin: 2rem 1rem;
     min-height: 100vh;
     place-content: center;
 }
 
-.container {
-    background: var(--BG-CARD);
-    border-radius: 20px;
-    box-shadow: 0px 0px 25px 0px var(--BG-CARD);
+a {
+    color: var(--WHITE);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* || CARD */
+.card {
+    background: var(--CARD-BG);
+    border-radius: 0.625rem;
     max-width: 350px;
-    padding: 1.5em;
+    padding: 1.5rem;
 }
 
-p {
-    line-height: 1.5;
+/* NFT IMAGE */
+.card__img {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
 
-/* || HERO */
-.hero img{
-    border-radius: 10px;
-}
+.card__img a::after {
+    /* ADD OPACITY */
+    --CYAN: hsl(178, 100%, 50%,0.5);
 
-.hero figcaption {
-    font-size: 1.25rem;
-    font-weight: 600;
-    padding: 1em 0 0.5em;
-}
-
-/* || INLINE */
-.inline{
-    border-bottom: 1px solid var(--LINE);
+    align-items: center;
+    background: var(--CYAN);
+    border-radius: 0.625rem;
+    content: url(../img/icon-view.svg);
     display: flex;
+    inset: 0;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.25s ease;
+}
+
+.card__img a:hover::after {
+    opacity: 1;
+}
+
+.card__img img{ 
+    border-radius: 0.625rem;
+}
+
+/* TITLE */
+.card__title {
+    color: var(--WHITE);
+    font-size: 1.5rem;
+    font-weight: var(--FW-BOLD);
+    padding: 1.5rem 0 1rem;
+}
+
+/* PARAGRAPH */
+.card__p {
+    font-weight: var(--FW-LIGHT);
+    line-height: 1.8;
+}
+
+/* GROUP PRICE + TIME */
+.card__group {
+    display: flex;
+    font-size: 1rem;
     justify-content: space-between;
-    padding: 1em 0;
+    margin: 1rem 0;
 }
 
-.inline figure {
+.card__price {
+    align-items: center;
+    color: var(--CYAN);
     display: flex;
+    font-weight: var(--FW-BOLD);
+    gap: 0.5rem;
 }
 
-.inline img {
-    margin-right: 0.5em;
+.card__price[data-icon="eth-icon"]::before {
+    background-image: url("../img/icon-ethereum.svg");
+    content: "";
+    height: 18px;
+    width: 11px;
 }
 
-/* || AUTHOR */
-.author {
+.card__time {
     align-items: center;
     display: flex;
-    padding: 1em 0 0;
+    font-weight: var(--FW-LIGHT);
+    gap: 0.5rem;
 }
 
-.author img {
+.card__time[data-icon="clock-icon"]::before {
+    background-image: url("../img/icon-clock.svg");
+    content: "";
+    height: 17px;
+    width: 17px;
+}
+
+/* AUTHOR */
+.card__author {
+    align-items: center;
+    border-top: 1px solid var(--LINE-COLOR);
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0 0;
+}
+
+.card__author img {
     border: 1px solid var(--WHITE);
     border-radius: 50%;
-    height: auto;
     width: 35px;
 }
 
-.author figcaption {
-    margin-left: 1em;
-}
-
 /* || FOOTER */
-.footer {
-    color: var(--WHITE);
-    font-size: 1.25rem;
-    margin-top: 2rem;
+footer {
+    margin-top: 1rem;
+    max-width: 350px;
     text-align: center;
-}
-
-.footer a{
-    color: var(--WHITE);
 }
